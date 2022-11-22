@@ -199,7 +199,7 @@ class NetworkTest(object):
         :return: Figure
         """
 
-        # Convert from b to Gb.
+        # Convert from b to Mb.
         dw = self.speed_data['download'] / (1024 * 1024)
         up = self.speed_data['upload'] / (1024 * 1024)
         pg = self.speed_data['ping']
@@ -261,11 +261,11 @@ class NetworkTest(object):
         fig.text(x=1, y=0.8, s=duration_str, ha='center', va='top', color=div(duration / 3600), size='xx-large')
         # Average download speed
         fig.text(x=1, y=0.65, s='Average Download Speed', ha='center', va='bottom')
-        fig.text(x=1, y=0.65, s=f'{round(dw_mean, 1)} Gbps', ha='center', va='top', color=div(dw_mean / 35),
+        fig.text(x=1, y=0.65, s=f'{round(dw_mean, 1)} Mbps', ha='center', va='top', color=div(dw_mean / 35),
                  size='xx-large')
         # Average upload speed
         fig.text(x=1, y=0.5, s='Average Upload Speed', ha='center', va='bottom')
-        fig.text(x=1, y=0.5, s=f'{round(up_mean, 1)} Gbps', ha='center', va='top', color=div(up_mean / 35),
+        fig.text(x=1, y=0.5, s=f'{round(up_mean, 1)} Mbps', ha='center', va='top', color=div(up_mean / 35),
                  size='xx-large')
         # Average ping
         fig.text(x=1, y=0.35, s='Average Ping', ha='center', va='bottom')
